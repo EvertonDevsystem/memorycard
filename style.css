@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #fff;
+    margin: 15px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.info {
+    color: #eee;
+    margin-bottom: 15px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    text-align: center;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(8px, 2vw, 15px);
+    width: 100%;
+    max-width: 520px;
+    padding: 0 10px;
+}
+
+.carta {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: transform 0.5s ease;
+}
+
+.carta.virada {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.costas {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-size: clamp(24px, 6vw, 40px);
+    color: white;
+}
+
+.frente {
+    background-color: white;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.frente img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.par-encontrado {
+    border-color: #00ff88;
+    box-shadow: 0 0 15px #00ff88;
+}
+
+button {
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.instrucoes {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: #ccc;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    text-align: center;
+    max-width: 500px;
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+code {
+    background: rgba(0,0,0,0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+@media (max-width: 350px) {
+    .tabuleiro { gap: 5px; }
+    .face { border-width: 2px; }
+}
