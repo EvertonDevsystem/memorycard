@@ -13,6 +13,17 @@ const imagens = [
 ];
 // ==================================================
 
+const imagens = [
+    { img: "img/BEATRICE.JPG" },
+    { img: "img/echidna.png" },
+    { img: "img/emilia.jpg" },
+    { img: "img/esdeath.jpeg" },
+    { img: "img/pm.jpg" },
+    { img: "img/REINHARD.JPG" },
+    { img: "img/ren.png" },
+    { img: "img/suba.jpg" }
+];
+
 let cartas = [];
 let cartasViradas = [];
 let paresEncontrados = 0;
