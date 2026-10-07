@@ -1,18 +1,3 @@
-// ==================================================
-// ✏️ EDITE AQUI — COLOQUE SEUS ARQUIVOS DA PASTA images/
-// ==================================================
-const imagens = [
-    { img: "../images/BEATRICE.JPG" },
-    { img: "../images/echidna.png" },
-    { img: "../images/emilia.jpg" },
-    { img: "../images/esdeath.jpeg" },
-    { img: "../images/pm.jpg" },
-    { img: "../images/REINHARD.JPG" },
-    { img: "../images/ren.png" },
-    { img: "../images/suba.jpg" }
-];
-// ==================================================
-
 const imagens = [
     { img: "img/BEATRICE.JPG" },
     { img: "img/echidna.png" },
