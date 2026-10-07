@@ -1,14 +1,17 @@
+// ==================================================
+//  images/
+// ==================================================
 const imagens = [
-    { img: "img/BEATRICE.JPG" },
-    { img: "img/echidna.png" },
-    { img: "img/emilia.jpg" },
-    { img: "img/esdeath.jpeg" },
-    { img: "img/pm.jpg" },
-    { img: "img/REINHARD.JPG" },
-    { img: "img/ren.png" },
-    { img: "img/suba.jpg" }
+    { img: "../images/BEATRICE.JPG" },
+    { img: "../images/echidna.png" },
+    { img: "../images/emilia.jpg" },
+    { img: "../images/esdeath.jpeg" },
+    { img: "../images/pm.jpg" },
+    { img: "../images/REINHARD.JPG" },
+    { img: "../images/ren.png" },
+    { img: "../images/suba.jpg" }
 ];
-
+// ==================================================
 let cartas = [];
 let cartasViradas = [];
 let paresEncontrados = 0;
